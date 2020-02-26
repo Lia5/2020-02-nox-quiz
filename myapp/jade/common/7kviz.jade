@@ -1,0 +1,141 @@
+section.kviz#kviz
+    .wrap
+        .kviz__body
+            .kviz__title Получите персональное предложение  для вашей компании
+            .kviz-qa
+                form(class="quizForm")
+                    .step-slide.step-slide--active
+                        .step-slide__num Осталось 4 вопроса из 5
+                        .step-slide__title Какой вид продуктов вы предоставляете?
+                        .kviz__ans.question__ans--radio
+                            label.pick-item(for="step1-1")
+                                input#step1-1.pick-item__input(type='radio', name='question1', value='Услуги ')
+                                .pick-item__label Услуги 
+                            label.pick-item(for="step1-2")
+                                input#step1-2.pick-item__input(type='radio', name='question1', value='Товары')
+                                .pick-item__label Товары
+                            label.pick-item(for="step1-3")
+                                input#step1-3.pick-item__input(type='radio', name='question1', value='Инфо-бизнес')
+                                .pick-item__label Инфо-бизнес
+                        .step-slide__bottom
+                            .kviz-progress
+                                .kviz-progress__title Расчет пройден на 20%
+                                .kviz-progress__steps
+                                    .kviz-progress__item.active
+                                    .kviz-progress__item
+                                    .kviz-progress__item
+                                    .kviz-progress__item
+                            .prev-next-container
+                                .kviz__error
+                                a.btn.btn-next.qa-next(href='#') Далее
+                    .step-slide
+                        .step-slide__num Осталось 3 вопроса из 5
+                        .step-slide__title На какую конкретно услугу вы хотите  привлечь клиентов?
+                            .step-slide__subtitle (Возможно выбрать несколько вариантов)
+                        .kviz__ans.question__ans--radio
+                            label.pick-item(for="step2-1")
+                                input#step2-1.pick-item__input(type='text', name='question2-1', placeholder="Ваша услуга ")
+                          
+                        .prev-next-container
+                            .kviz__error
+                            a.btn.btn--white.btn-prev.qa-prev(href='#') Назад
+                            a.btn.btn-next.qa-next(href='#') Далее
+                    .step-slide
+                        .step-slide__num Шаг 3 из 5
+                        .step-slide__title С какими проблемами вы сталкивались в процессе работы?
+                        .kviz__ans.question__ans--radio
+                            label.pick-item(for="step3-1")
+                                input#step3-1.pick-item__input(type='radio', name='question3', value='Рынок меньше, чем на нем дистрибьюторов')
+                                .pick-item__label Рынок меньше, чем на нем <span class="desctop-br"></span>дистрибьюторов
+                            label.pick-item(for="step3-2")
+                                input#step3-2.pick-item__input(type='radio', name='question3', value='Я в первой линии у лидера, но все равно не зарабатываю')
+                                .pick-item__label Я в первой линии <span class="desctop-br"></span>у лидера, но все равно <span class="desctop-br"></span>не зарабатываю
+                            label.pick-item(for="step3-3")
+                                input#step3-3.pick-item__input(type='radio', name='question3', value='Мой наставник никак не проявляется, не поддерживает и не обучает')
+                                .pick-item__label Мой наставник никак <span class="desctop-br"></span>не проявляется, <span class="desctop-br"></span>не поддерживает <span class="desctop-br"></span>и не обучает
+                            label.pick-item(for="step3-4")
+                                input#step3-4.pick-item__input(type='radio', name='question3', value='Я долгое время в бизнесе, но команда не растет')
+                                .pick-item__label Я долгое время в бизнесе, <span class="desctop-br"></span>но команда не растет
+                            label.pick-item(for="step3-5")
+                                input#step3-5.pick-item__input(type='radio', name='question3', value=' “Теплый список” выгорел, а холодные контакты не приходят на встречи')
+                                .pick-item__label “Теплый список” выгорел, <span class="desctop-br"></span>а холодные контакты не <span class="desctop-br"></span>приходят на встречи
+                            label.pick-item(for="step3-6")
+                                input#step3-6.pick-item__input(type='radio', name='question3', value='Продукт компании мне не подходит или не интересен')
+                                .pick-item__label Продукт компании <span class="desctop-br"></span>мне не подходит или <span class="desctop-br"></span>не интересен
+                        .prev-next-container
+                            .kviz__error
+                            a.btn.btn--white.btn-prev.qa-prev(href='#') Назад
+                            a.btn.btn-next.qa-next(href='#') Далее
+                    .step-slide
+                        .step-slide__num Шаг 4 из 5
+                        .step-slide__title Что в целом вам нравится в сетевом бизнесе?
+                        .kviz__ans.question__ans--radio
+                            label.pick-item(for="step4-1")
+                                input#step4-1.pick-item__input(type='radio', name='question4', value='Возможность работать из любой точки мира')
+                                .pick-item__label Возможность работать <span class="desctop-br"></span>из любой точки мира
+                            label.pick-item(for="step4-2")
+                                input#step4-2.pick-item__input(type='radio', name='question4', value='Возможность распоряжаться своим временем и графиком работы')
+                                .pick-item__label Возможность распоряжаться <span class="desctop-br"></span>своим временем и графиком <span class="desctop-br"></span>работы
+                            label.pick-item(for="step4-3")
+                                input#step4-3.pick-item__input(type='radio', name='question4', value='Перспективы финансового заработка')
+                                .pick-item__label Перспективы финансового <span class="desctop-br"></span>заработка
+                            label.pick-item(for="step4-4")
+                                input#step4-4.pick-item__input(type='radio', name='question4', value='Возможность быть частью большой команды, знакомиться с новыми людьми')
+                                .pick-item__label Возможность <span class="desctop-br"></span>быть частью большой <span class="desctop-br"></span>команды, знакомиться <span class="desctop-br"></span>с новыми людьми
+                            label.pick-item(for="step4-5")
+                                input#step4-5.pick-item__input(type='radio', name='question4', value='Возможность быть вкладом в благополучие других людей')
+                                .pick-item__label Возможность быть <span class="desctop-br"></span>вкладом в благополучие <span class="desctop-br"></span>других людей 
+                        .prev-next-container
+                            .kviz__error
+                            a.btn.btn--white.btn-prev.qa-prev(href='#') Назад
+                            a.btn.btn-next.qa-next(href='#') Далее
+                    .step-slide
+                        .step-slide__num Шаг 5 из 5
+                        .step-slide__title На что вы хотите тратить деньги, заработанные в сетевом бизнесе?
+                        .kviz__ans.question__ans--radio
+                            label.pick-item(for="step5-1")
+                                input#step5-1.pick-item__input(type='radio', name='question5', value='Закрыть базовые потребности')
+                                .pick-item__label Закрыть базовые потребности
+                            label.pick-item(for="step5-2")
+                                input#step5-2.pick-item__input(type='radio', name='question5', value='Накопить на большую покупку (квартира, дом, автомобиль и пр.)')
+                                .pick-item__label Накопить на большую <span class="desctop-br"></span>покупку (квартира, дом, <span class="desctop-br"></span>автомобиль и пр.)
+                            label.pick-item(for="step5-3")
+                                input#step5-3.pick-item__input(type='radio', name='question5', value='Путешествовать  по миру')
+                                .pick-item__label Путешествовать <span class="desctop-br"></span> по миру
+                            label.pick-item(for="step5-4")
+                                input#step5-4.pick-item__input(type='radio', name='question5', value='Переехать жить в другую страну')
+                                .pick-item__label Переехать жить <span class="desctop-br"></span>в другую страну
+                            label.pick-item(for="step5-5")
+                                input#step5-5.pick-item__input(type='radio', name='question5', value='Потратить деньги на обучение детей')
+                                .pick-item__label Потратить деньги на <span class="desctop-br"></span>обучение детей
+                            label.pick-item(for="step5-6")
+                                input#step5-6.pick-item__input(type='radio', name='question5', value='Другое')
+                                .pick-item__label Другое
+                        .prev-next-container
+                            .kviz__error
+                            a.btn.btn--white.btn-prev.qa-prev(href='#') Назад
+                            a.btn.btn-next.qa-next(href='#') Далее
+                    .step-slide.step-slide--finish
+                        .step-slide__num Спасибо за ответы!
+                        .step-slide__title Остался последний шаг 
+                        p Мы уже анализируем ваши ответы и почти готовы дать результат. <span class="desctop-br"><br></span>Оставьте свой контакт за которым мы закрепим ваши бонусы на 30 дней.
+                        .step-slide__gift Подарки будут забронированы <span class="desctop-br"><br></span>за вашим номером телефона
+                        .form.step-slide__form
+                            .form-line 
+                                label Введите ваше имя
+                                    input(type="text" placeholder="Александр" name="name2" required).rfield.name-icon
+                                label Введите номер телефона
+                                    input(type="text" placeholder="+380" name="phone" required).rfield.phone-mask
+                            //- input.btn.btn--orange(type='submit', value='Получить предложение')
+                            .agree-line
+                                input#modal__agree(type='checkbox', checked='', disabled='')
+                                label(for='#modal__agree') Я согласен на обработку персональных данных
+                            button.btn.btn-finish(type="submit")
+                                a(href="#modalKviz").modal-open.kviz__btn Получить бонусы и результат
+        .kviz-sidebar
+            .kviz-sidebar__foto
+                img(src="img/nikolay.png", alt="nikolay")
+            .kviz-sidebar__name Николай Чигвинцев
+            .kviz-sidebar__text Руководитель Digital Agency NOX
+            .kviz-sidebar_text Пожалуйста, отвечайте максимально точно на вопросы. В течение часа после отправки результата, мы предоставим индивидуальное предложение.
+        

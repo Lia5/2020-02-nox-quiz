@@ -1,0 +1,156 @@
+.stages {
+    color: #fff;
+    background: #0a0a0a;
+    padding: 165px 0 176px;
+    &__title {
+        text-align: center;
+        margin-bottom: 29px;
+    }
+    &__subtitle {
+        text-align: center;
+        max-width: 757px;
+        margin: 0 auto 97px;
+    }
+    &-slider {
+        display: flex;
+        &__items {
+            width: 50%;
+        }
+        &__item {
+            display: none;
+            align-items: center;
+            &.active {
+                display: flex;
+            }
+        }
+        &__number {
+            font-weight: 700;
+            color: $accent;
+            font-size: 330px;
+            line-height: 340px;
+            min-width: 241px;
+        }
+        &__descr {
+            padding-bottom: 16px;
+        }
+        &__day {
+            color: $accent;
+            font-size: 35px;
+            line-height: 60px;
+            font-weight: 700;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 150px;
+                height: 3px;
+                background: $accent;
+            }
+        }
+        &__text {
+            font-size: 30px;
+            line-height: 36px;
+            font-weight: 700;
+            padding-top: 38px;
+        }
+        &__nums {
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+            padding: 20px 0 20px;
+        }
+        &__num {
+            position: relative;
+            display: flex;
+            width: 25%;
+            font-size: 30px;
+            line-height: 30px;
+            font-weight: 700;
+            span {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                border: 3px solid $accent;
+                padding: 8px 0 0 0;
+                margin: auto 0;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 54px;
+                    height: 54px;
+                    border-radius: 50%;
+                    border: 5px solid #0a0a0a;
+                    pointer-events: none;
+                }
+
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                top: 18px;
+                right: -6px;
+                width: 93px;
+                height: 25px;
+                background: url('../img/icons/arrow-num.png');
+            }
+            &.active {
+                span {
+                    background: $accent;
+                }
+            }
+            &:nth-of-type(2) {
+                &:before {
+                    top: 116px;
+                    transform: scale(1, -1);
+                }
+            }
+            &:nth-of-type(4) {
+                &:before {
+                    top: 135px;
+                    transform: rotate(59deg);
+                }
+            }
+            &:nth-of-type(n+5) {
+                &:before {
+                    right: auto;
+                    left: -50px;
+                    transform: scale(-1, 1)
+                }
+                span {
+                    margin: auto;
+                }
+            }
+            &:nth-of-type(5) {
+                order: 4;
+                &:before {
+                    top: 116px;
+                    transform: scale(-1, -1)
+                }
+            }
+            &:nth-of-type(6) {
+                order: 3;
+            }
+            &:nth-of-type(7) {
+                order: 2;
+                &:before {
+                    top: 116px;
+                    transform: scale(-1, -1)
+                }
+            }
+            &:nth-of-type(8) {
+                order: 1;
+                &:before {
+                    content: none;
+                }
+            }
+        }
+    }
+}

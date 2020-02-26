@@ -1,4 +1,99 @@
 $(function() {
+    function go() {
+        $('.stages-slider__num.active').removeClass('active').next().addClass('active') .closest('.stages-slider').find('.stages-slider__item.active').removeClass('active').next().addClass('active');
+      }
+      let interval;
+      let intervalTime = 1500;
+      let delayTime = 1500;
+      let stopTimeout;
+      let startTimeout;
+      
+      function start() {
+        interval = setInterval(go, 1500);
+      
+        startTimeout = setTimeout(stop, delayTime + intervalTime);
+        if ($('.stages-slider__num.active').next().length == 0) {
+            $('.stages-slider__item').removeClass('active');
+            $('.stages-slider__num').first().addClass('active');
+            $('.stages-slider__item').first().addClass('active');
+        }
+        clearTimeout(stopTimeout);
+      }
+      
+      function stop() {
+        clearInterval(interval);
+      
+        stopTimeout = setTimeout(start, delayTime - intervalTime);
+        clearTimeout(startTimeout);
+      }
+      
+    //   start();
+ 
+      $('.stages-slider__num span').click(function(){
+        $(this).parent().addClass('active').siblings().removeClass('active');
+        $(this).parent().parent().parent().find('.stages-slider__item').removeClass('active').eq($(this).parent().index()).addClass('active');
+      });
+
+    //   .results
+    $('.results__more').on('click', function(e){
+        e.preventDefault();
+        $(this).addClass('btn--hidden').parent().next().addClass('active');
+    });
+    $('.btn--up').on('click', function(e){
+        e.preventDefault();
+        // console.log($(this).parent().parent().removeClass('active').prev().find('.btn--hidden').removeClass('btn--hidden'));
+        $(this).parent().parent().removeClass('active').prev().find('.btn--hidden').removeClass('btn--hidden');
+    });
+
+
+    // parallax
+    var elem = $('.action'),
+    pos = elem.offset(),
+    elem_left = pos.left,
+    elem_top = pos.top,
+    elem_width = elem.width(),
+    elem_height = elem.height(),
+    x_center,
+    y_center;
+
+
+    $('.action').mousemove(function(e){
+
+    x_center = ( elem_width / 2 ) - ( e.pageX - elem_left );
+    y_center = ( elem_height / 2 ) - ( e.pageY - elem_top );
+
+    $('.parallax').each(function(){
+
+        var speed = $(this).attr('data-speed'),
+            xPos = Math.round(-1*x_center/20*speed),
+            yPos = Math.round(y_center/20*speed);
+
+        if (yPos < 0)
+        yPos = -2*speed;
+    
+        $(this).css('transform', 'translate3d('+xPos+'px, '+yPos+'px, 0px)');
+
+        });
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //select-number form
     if(jQuery('.phone-mask').length) {
         jQuery(function($){
