@@ -468,15 +468,15 @@
                 <div class="step-slide__title">Какой вид продуктов вы предоставляете?</div>
                 <div class="kviz__ans question__ans--radio">
                   <label for="step1-1" class="pick-item">
-                    <input id="step1-1" type="radio" name="question1" value="Услуги " class="pick-item__input">
+                    <input id="step1-1" type="radio" name="question1" value="Услуги " class="step1-1 pick-item__input">
                     <div class="pick-item__label">Услуги </div>
                   </label>
                   <label for="step1-2" class="pick-item">
-                    <input id="step1-2" type="radio" name="question1" value="Товары" class="pick-item__input">
+                    <input id="step1-2" type="radio" name="question1" value="Товары" class="step1-2 pick-item__input">
                     <div class="pick-item__label">Товары</div>
                   </label>
                   <label for="step1-3" class="pick-item">
-                    <input id="step1-3" type="radio" name="question1" value="Инфо-бизнес" class="pick-item__input">
+                    <input id="step1-3" type="radio" name="question1" value="Инфо-бизнес" class="step1-3 pick-item__input">
                     <div class="pick-item__label">Инфо-бизнес</div>
                   </label>
                 </div>
@@ -485,6 +485,7 @@
                     <div class="kviz-progress__title">Расчет пройден на 20%</div>
                     <div class="kviz-progress__steps">
                       <div class="kviz-progress__item active"></div>
+                      <div class="kviz-progress__item"></div>
                       <div class="kviz-progress__item"></div>
                       <div class="kviz-progress__item"></div>
                       <div class="kviz-progress__item"></div>
@@ -497,49 +498,72 @@
               </div>
               <div class="step-slide">
                 <div class="step-slide__num">Осталось 3 вопроса из 5</div>
-                <div class="step-slide__title">На какую конкретно услугу вы хотите  привлечь клиентов?
-                  <div class="step-slide__subtitle">(Возможно выбрать несколько вариантов)</div>
-                </div>
-                <div class="kviz__ans question__ans--radio">
+                <div id="second-question" class="step-slide__title">На какую конкретно услугу вы хотите  привлечь клиентов?</div>
+                <div class="kviz__ans question__ans--text">
                   <label for="step2-1" class="pick-item">
-                    <input id="step2-1" type="text" name="question2-1" placeholder="Ваша услуга " class="pick-item__input">
+                    <input id="step2-1" type="text" name="question2-1" placeholder="Ваша услуга " class="pick-item__input input--text">
                   </label>
                 </div>
-                <div class="prev-next-container">
-                  <div class="kviz__error"></div><a href="#" class="btn btn--white btn-prev qa-prev">Назад</a><a href="#" class="btn btn-next qa-next">Далее</a>
+                <div class="step-slide__bottom">
+                  <div class="kviz-progress">
+                    <div class="kviz-progress__title">Расчет пройден на 40%</div>
+                    <div class="kviz-progress__steps">
+                      <div class="kviz-progress__item active"></div>
+                      <div class="kviz-progress__item active"></div>
+                      <div class="kviz-progress__item"></div>
+                      <div class="kviz-progress__item"></div>
+                      <div class="kviz-progress__item"></div>
+                    </div>
+                  </div>
+                  <div class="prev-next-container">
+                    <div class="kviz__error"></div><a href="#" class="btn btn-next qa-next">Далее</a>
+                  </div>
                 </div>
               </div>
               <div class="step-slide">
-                <div class="step-slide__num">Шаг 3 из 5</div>
-                <div class="step-slide__title">С какими проблемами вы сталкивались в процессе работы?</div>
+                <div class="step-slide__num">Осталось 2 вопроса из 5</div>
+                <div class="step-slide__title">Сколько в среднем продаж в месяц вы делаете?</div>
                 <div class="kviz__ans question__ans--radio">
                   <label for="step3-1" class="pick-item">
-                    <input id="step3-1" type="radio" name="question3" value="Рынок меньше, чем на нем дистрибьюторов" class="pick-item__input">
-                    <div class="pick-item__label">Рынок меньше, чем на нем <span class="desctop-br"></span>дистрибьюторов</div>
+                    <input id="step3-1" type="radio" name="question3" value="до 10" class="pick-item__input">
+                    <div class="pick-item__label">до 10</div>
+                    <div class="pick-item__line"></div>
                   </label>
                   <label for="step3-2" class="pick-item">
-                    <input id="step3-2" type="radio" name="question3" value="Я в первой линии у лидера, но все равно не зарабатываю" class="pick-item__input">
-                    <div class="pick-item__label">Я в первой линии <span class="desctop-br"></span>у лидера, но все равно <span class="desctop-br"></span>не зарабатываю</div>
+                    <input id="step3-2" type="radio" name="question3" value="до 50" class="pick-item__input">
+                    <div class="pick-item__label">до 50</div>
                   </label>
                   <label for="step3-3" class="pick-item">
-                    <input id="step3-3" type="radio" name="question3" value="Мой наставник никак не проявляется, не поддерживает и не обучает" class="pick-item__input">
-                    <div class="pick-item__label">Мой наставник никак <span class="desctop-br"></span>не проявляется, <span class="desctop-br"></span>не поддерживает <span class="desctop-br"></span>и не обучает</div>
+                    <input id="step3-3" type="radio" name="question3" value="до 150" class="pick-item__input">
+                    <div class="pick-item__label">до 150</div>
                   </label>
                   <label for="step3-4" class="pick-item">
-                    <input id="step3-4" type="radio" name="question3" value="Я долгое время в бизнесе, но команда не растет" class="pick-item__input">
-                    <div class="pick-item__label">Я долгое время в бизнесе, <span class="desctop-br"></span>но команда не растет</div>
+                    <input id="step3-4" type="radio" name="question3" value="до 500" class="pick-item__input">
+                    <div class="pick-item__label">до 500</div>
                   </label>
                   <label for="step3-5" class="pick-item">
-                    <input id="step3-5" type="radio" name="question3" value=" “Теплый список” выгорел, а холодные контакты не приходят на встречи" class="pick-item__input">
-                    <div class="pick-item__label">“Теплый список” выгорел, <span class="desctop-br"></span>а холодные контакты не <span class="desctop-br"></span>приходят на встречи</div>
+                    <input id="step3-5" type="radio" name="question3" value="до 1000" class="pick-item__input">
+                    <div class="pick-item__label">до 1000</div>
                   </label>
                   <label for="step3-6" class="pick-item">
-                    <input id="step3-6" type="radio" name="question3" value="Продукт компании мне не подходит или не интересен" class="pick-item__input">
-                    <div class="pick-item__label">Продукт компании <span class="desctop-br"></span>мне не подходит или <span class="desctop-br"></span>не интересен</div>
+                    <input id="step3-6" type="radio" name="question3" value="боле 1000" class="pick-item__input">
+                    <div class="pick-item__label">более 1000</div>
                   </label>
                 </div>
-                <div class="prev-next-container">
-                  <div class="kviz__error"></div><a href="#" class="btn btn--white btn-prev qa-prev">Назад</a><a href="#" class="btn btn-next qa-next">Далее</a>
+                <div class="step-slide__bottom">
+                  <div class="kviz-progress">
+                    <div class="kviz-progress__title">Расчет пройден на 60%</div>
+                    <div class="kviz-progress__steps">
+                      <div class="kviz-progress__item active"></div>
+                      <div class="kviz-progress__item active"></div>
+                      <div class="kviz-progress__item active"></div>
+                      <div class="kviz-progress__item"></div>
+                      <div class="kviz-progress__item"></div>
+                    </div>
+                  </div>
+                  <div class="prev-next-container">
+                    <div class="kviz__error"></div><a href="#" class="btn btn-next qa-next">Далее</a>
+                  </div>
                 </div>
               </div>
               <div class="step-slide">
@@ -633,276 +657,6 @@
           <div class="kviz-sidebar__name">Николай Чигвинцев</div>
           <div class="kviz-sidebar__text">Руководитель Digital Agency NOX</div>
           <div class="kviz-sidebar_text">Пожалуйста, отвечайте максимально точно на вопросы. В течение часа после отправки результата, мы предоставим индивидуальное предложение.</div>
-        </div>
-      </div>
-    </section>
-    <section class="results">
-      <div class="wrap">
-        <div class="results__maintitle">Какие уже есть результаты?</div>
-        <div class="results__body">
-          <div class="results__wrap results--optica">
-            <div class="results__header">
-              <div class="results__title">«Оптика для всей семьи» — сеть оптик  в городе Краснодар</div>
-              <div class="results__logo"><img src="img/optica-logo.png" alt="optica-logo"></div>
-            </div>
-            <div class="results__figures">
-              <div class="results__figure">
-                <div class="results__num">5%</div>
-                <div class="results__text">Конверсия</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">86</div>
-                <div class="results__text">Лидов</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">140,9 ₽</div>
-                <div class="results__text">Стоимость лида</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">30 дней</div>
-                <div class="results__text">Период работы кампании</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">12 118 ₽</div>
-                <div class="results__text">Рекламный бюджет</div>
-              </div>
-            </div>
-            <div class="results__btns"><a href="#" class="btn results__more">Подробнее</a><a href="#" class="btn btn--line">Перейти на сайт</a></div>
-            <div class="results__details">
-              <div class="results__details-wrap">
-                <div class="column">
-                  <div class="results__subtitle">Что было:</div>
-                  <div class="results__text">Существующий сайт клиента и попытки продвижения не приносили желаемого результата. Не было понимания сколько нужно привлечь лидов, чтобы закрыть одну сделку. Проблемы с получением и обработкой лидов, отсутствие скриптов продаж.</div>
-                  <div class="results__subtitle">Поставленная задача:</div>
-                  <div class="results__text">Привлечь лиды, а также настроить систему их получения и обработки.</div>
-                </div>
-                <div class="column results__done">
-                  <div class="results__subtitle">Что мы сделали:</div>
-                  <ul class="results__list">
-                    <li>Проработали озвученную клиентом ЦА  Разработали квиз и провели </li>
-                    <li>Проработали озвученную клиентом ЦА</li>
-                    <li>Разработали квиз и провели A/B тестирование по вопросам</li>
-                    <li>Настроили рекламную кампанию и постоянную лидогенерацию</li>
-                    <li>Настроили AmoCRM, подключили сейлз менеджеров</li>
-                    <li>Прописали скрипты продаж</li>
-                    <li>Взяли под контроль обработку лидов и работу с возражениями</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="results__btns"><a href="#action" class="btn">Хочу так же</a><a href="#" class="btn btn--up"> <img src="img/icons/left-arrow.svg" alt="arrow" class="arrow-btn"></a></div>
-            </div>
-          </div>
-        </div>
-        <div class="results__body">
-          <div class="results__wrap results--md">
-            <div class="results__header">
-              <div class="results__title">«МД проект» — дизайн-студия, ремонт и внутренняя отделка</div>
-              <div class="results__logo"><img src="img/md-logo.png" alt="md-logo"></div>
-            </div>
-            <div class="results__figures">
-              <div class="results__figure">
-                <div class="results__num">11,55%</div>
-                <div class="results__text">Конверсия</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">49</div>
-                <div class="results__text">Лидов</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">$3,47</div>
-                <div class="results__text">Стоимость лида</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">21 день</div>
-                <div class="results__text">Период работы кампании</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">$170,36</div>
-                <div class="results__text">Рекламный бюджет</div>
-              </div>
-            </div>
-            <div class="results__btns"><a href="#" class="btn results__more">Подробнее</a><a href="#" class="btn btn--line">Перейти на сайт</a></div>
-            <div class="results__details">
-              <div class="results__details-wrap">
-                <div class="column">
-                  <div class="results__subtitle">Что было:</div>
-                  <div class="results__text">Существующий сайт компании давал недопустимо низкую конверсию. Отсутствовала CRM, потому клиентов вели “в блокноте”</div>
-                  <div class="results__subtitle">Поставленная задача:</div>
-                  <div class="results__text">Привлечь лиды, а также настроить систему их получения и обработки.</div>
-                </div>
-                <div class="column results__done">
-                  <div class="results__subtitle">Что мы сделали:</div>
-                  <ul class="results__list">
-                    <li>Разработали квиз</li>
-                    <li>Запустили рекламную кампанию в FACEBOOK</li>
-                    <li>Провели A/B тестирование с креативами </li>
-                    <li>Создали систему привлечения клиентов</li>
-                    <li>Интегрировали AmoCRM, создали воронку продаж</li>
-                    <li>Дали рекомендации по повышению конверсии продаж</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="results__btns"><a href="#action" class="btn">Хочу так же</a><a href="#" class="btn btn--up"> <img src="img/icons/left-arrow.svg" alt="arrow" class="arrow-btn"></a></div>
-            </div>
-          </div>
-        </div>
-        <div class="results__body">
-          <div class="results__wrap results--solarled">
-            <div class="results__header">
-              <div class="results__title">«Solarled» — компания по проектированию солнечных электростанци</div>
-              <div class="results__logo"><img src="img/solarled-logo.png" alt="solarled-logo"></div>
-            </div>
-            <div class="results__figures">
-              <div class="results__figure">
-                <div class="results__num">3,9%</div>
-                <div class="results__text">Конверсия</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">64</div>
-                <div class="results__text">Лидов</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">$3,2</div>
-                <div class="results__text">Стоимость лида</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">12 дней</div>
-                <div class="results__text">Период работы кампании</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">$208,9</div>
-                <div class="results__text">Рекламный бюджет</div>
-              </div>
-            </div>
-            <div class="results__btns"><a href="#" class="btn results__more">Подробнее</a><a href="#" class="btn btn--line">Перейти на сайт</a></div>
-            <div class="results__details">
-              <div class="results__details-wrap">
-                <div class="column">
-                  <div class="results__subtitle">Что было:</div>
-                  <div class="results__text">В начале нашей работы у клиента был только старый лендинг, который давал низкий результат, работала контекстная реклама. Изредка клиент запускал таргетированную рекламу, но результата она не приносила.</div>
-                  <div class="results__subtitle">Поставленная задача:</div>
-                  <div class="results__text">Привлечь новых потенциальных клиентов, используя выделенный бюджет.</div>
-                </div>
-                <div class="column results__done">
-                  <div class="results__subtitle">Что мы сделали:</div>
-                  <ul class="results__list">
-                    <li>Проработали образы ЦА</li>
-                    <li>Написали офферы и запустили рекламную кампанию в фейсбук</li>
-                    <li>Изучили желания, требования и боли ЦА, на основе чего разработали новый квиз-лендинг</li>
-                    <li>Настроили контекстную и таргетированную рекламные кампании</li>
-                    <li>Настроили AmoCRM</li>
-                    <li>Взяли под контроль скорость и качество обработки лидов</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="results__btns"><a href="#action" class="btn">Хочу так же</a><a href="#" class="btn btn--up"> <img src="img/icons/left-arrow.svg" alt="arrow" class="arrow-btn"></a></div>
-            </div>
-          </div>
-        </div>
-        <div class="results__body">
-          <div class="results__wrap results--fainoclean">
-            <div class="results__header">
-              <div class="results__title">«FainoClean» — компания  попредоставлению клининговых услуг </div>
-              <div class="results__logo"><img src="img/fainoclean-logo.png" alt="fainoclean-logo"></div>
-            </div>
-            <div class="results__figures">
-              <div class="results__figure">
-                <div class="results__num">12,28%</div>
-                <div class="results__text">Конверсия</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">210</div>
-                <div class="results__text">Лидов</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">$1,11</div>
-                <div class="results__text">Стоимость лида</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">49 дней</div>
-                <div class="results__text">Период работы кампании</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">$232,94</div>
-                <div class="results__text">Рекламный бюджет</div>
-              </div>
-            </div>
-            <div class="results__btns"><a href="#" class="btn results__more">Подробнее</a><a href="#" class="btn btn--line">Перейти на сайт</a></div>
-            <div class="results__details">
-              <div class="results__details-wrap">
-                <div class="column">
-                  <div class="results__subtitle">Что было:</div>
-                  <div class="results__text">Клиент имел негативный опыт продвижения: недопустимо высокая стоимость лидов и слив бюджета подрядчиками. Вследствии чего не было понимания стоимости лида, конверсии существующего сайта и многого другого.</div>
-                  <div class="results__subtitle">Поставленная задача:</div>
-                  <div class="results__text">Создать поток лидов и уменьшить стоимость заявки до $2,5 </div>
-                </div>
-                <div class="column results__done">
-                  <div class="results__subtitle">Что мы сделали:</div>
-                  <ul class="results__list">
-                    <li>Разработали квиз</li>
-                    <li>Прописали несколько путей клиента</li>
-                    <li>Запустили рекламные кампании на B2B и B2C рынок</li>
-                    <li>Снизили стоимость лида в среднем до $1,1</li>
-                    <li>Настроили CRM-систему на прием заявок</li>
-                    <li>Взяли под контроль работу с лидами</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="results__btns"><a href="#action" class="btn">Хочу так же</a><a href="#" class="btn btn--up"> <img src="img/icons/left-arrow.svg" alt="arrow" class="arrow-btn"></a></div>
-            </div>
-          </div>
-        </div>
-        <div class="results__body">
-          <div class="results__wrap results--newhouse">
-            <div class="results__header">
-              <div class="results__title">«New House» — дизайн-студия </div>
-              <div class="results__logo"><img src="img/newhouse-logo.png" alt="newhouse-logo"></div>
-            </div>
-            <div class="results__figures">
-              <div class="results__figure">
-                <div class="results__num">3,87%</div>
-                <div class="results__text">Конверсия</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">72</div>
-                <div class="results__text">Лидов</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">$8,46</div>
-                <div class="results__text">Стоимость лида</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">46 дней</div>
-                <div class="results__text">Период работы кампании</div>
-              </div>
-              <div class="results__figure">
-                <div class="results__num">$609,71</div>
-                <div class="results__text">Рекламный бюджет</div>
-              </div>
-            </div>
-            <div class="results__btns"><a href="#" class="btn results__more">Подробнее</a><a href="#" class="btn btn--line">Перейти на сайт</a></div>
-            <div class="results__details">
-              <div class="results__details-wrap">
-                <div class="column">
-                  <div class="results__subtitle">Что было:</div>
-                  <div class="results__text">Клиент пришел после негативного опыта работы с таргетологом и старым сайтом, на который иногда запускалась реклама. Отсутствовал медиаплан (стоимость лида и стоимость клиента)</div>
-                  <div class="results__subtitle">Поставленная задача:</div>
-                  <div class="results__text">Настроить лидогенерацию, создать сайт, который будет как продавать, так и быть портфолио — демонстрировать кейсы клиента.</div>
-                </div>
-                <div class="column results__done">
-                  <div class="results__subtitle">Что мы сделали:</div>
-                  <ul class="results__list">
-                    <li>Проработали образы ЦА</li>
-                    <li>Проработали путь клиента</li>
-                    <li>Разработали квиз</li>
-                    <li>Запустили таргетированную рекламу и получили первые результаты</li>
-                    <li>Взяли под контроль скорость и качество обработки заявок</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="results__btns"><a href="#action" class="btn">Хочу так же</a><a href="#" class="btn btn--up"> <img src="img/icons/left-arrow.svg" alt="arrow" class="arrow-btn"></a></div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

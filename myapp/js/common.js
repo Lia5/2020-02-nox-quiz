@@ -27,7 +27,7 @@ $(function() {
         clearTimeout(startTimeout);
       }
       
-    //   start();
+      start();
  
       $('.stages-slider__num span').click(function(){
         $(this).parent().addClass('active').siblings().removeClass('active');
@@ -105,11 +105,19 @@ $(function() {
     if(jQuery('.kviz').length) {
         $('.qa-next').click(function(e){
             e.preventDefault();
-            if($(this).parent().prev().find('input:checked').length) {
-                $('.kviz-progress').find('.kviz-progress__item.active').removeClass('active').next().addClass('active'); 
-                $(this).parent().parent('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
+            if ($(this).parent().parent().prev().hasClass('question__ans--radio')) {
+                if($(this).parent().prev().find('input:checked').length) {
+                    $(this).parent().parent().parent('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
+                } else  {
+                    $(this).parent().find('.kviz__error').text('Выберите вариант ответа!');
+                }
             } else {
-                $(this).parent().find('.kviz__error').text('Выберите вариант ответа!');
+                if ($(this).parent().parent().prev().find('.input--text').val() != ''){
+                    console.log($(this).parent().parent().prev().find('.input--text').val());
+                    $(this).parent().parent().parent('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
+                } else {
+                    $(this).parent().find('.kviz__error').text('Введите ответ!');
+                }
             }
 
             
@@ -118,11 +126,20 @@ $(function() {
         
             $('input[type="radio"]+.pick-item__label').click(function(){
                 delayRadio($(this));       
+                console.log($(this).prev().hasClass('step1-2'));
+                
+                if ($(this).prev().hasClass('step1-2')) {
+                    $('#second-question').html('Какой конкретно товар вы хотите продать?');
+                    $('#step2-1').attr('placeholder', 'Ваш товар');
+                } else if ($(this).prev().hasClass('step1-3')) {
+                    $('#second-question').html('Какой информационный продукт  вы хотите реализовать?');
+                    $('#step2-1').attr('placeholder', 'Ваш продукт');
+                }
             });
             function delayRadio(item) {
                 setTimeout( function () {
                     item.parent().parent().parent('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
-                    $('.kviz-progress').find('.kviz-progress__item.active').removeClass('active').next().addClass('active'); 
+                    // $('.kviz-progress').find('.kviz-progress__item.active').removeClass('active').next().addClass('active'); 
                     
                 }, 500 );   
             };

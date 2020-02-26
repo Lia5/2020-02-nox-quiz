@@ -92,10 +92,64 @@
 }
 .step {
     &-slide {
-        display: none;
+        // display: none;
         position: relative;
         &--active {
             display: block;
+        }
+        &:nth-child(2) {
+            .pick-item {
+                width: 100%;
+            }
+        }
+        &:nth-child(3) {
+            .pick-item {
+                width: auto;
+                position: relative;
+                &__line {
+                    width: 100%;
+                    position: absolute;
+                    bottom: -35px;
+                    left: 50%;
+                    margin-right: -50%;
+                    transform: translate(-50%, 0);
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    border: 4px solid red;
+                    &:before  {
+                        content: "";
+                    }
+                }
+            }
+            .pick-item__input[type=radio]:checked+.pick-item__label:after {
+                background-color: $accent;
+            }
+            .pick-item__label {
+                height: auto;
+                .pick-item__label:hover:before {
+                    border-color: transparent;
+                }
+                &:before {
+                    top: -2px;
+                    left: -2px;
+                    background: #f4f5f7;
+                    border-color: transparent;
+                    z-index: -1;
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: -7px;
+                    left: 41%;
+                    margin-right: -50%;
+                    transform: translate(-50%, 0);
+                    width: 14px;
+                    height: 14px;
+                    background: #f5f6f7;
+                    transform: rotate(45deg);
+                }
+            }
         }
         &__num {
             font-size: 16px;
@@ -224,6 +278,14 @@
             display: block;
             border: 2px solid #f5f6f7;
             background: transparent;
+            font-size: 16px;
+            line-height: 18px;
+            padding: 43px 20px;
+            width: 100%;
+            max-width: 520px;
+            &::placeholder {
+                text-align: center;
+            }
         }
     }
     &__label {
