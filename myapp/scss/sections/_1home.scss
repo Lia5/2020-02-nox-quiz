@@ -8,6 +8,13 @@
             position: absolute;
             bottom: 9px;
             right: -153px;
+            @media screen and (max-width: 780px) {
+                right: -53px;
+            }
+            @media screen and (max-width: 5810px) {
+                display: none;
+            }
+
         }
         &:after {
             content: "";
@@ -20,6 +27,9 @@
             background-position: top right 41px;
             background-size: 1000px;
             z-index: 1;
+            @media screen and (max-width: 1082px) {
+                content: none;
+            }
         }
     }
     @media screen and (max-width: 580px) {
@@ -29,6 +39,12 @@
         position: relative;
         width: 50%;
         padding-bottom: 171px;
+        @media screen and (max-width: 1075px) {
+            padding-bottom: 0;
+        }
+        @media screen and (max-width: 780px) {
+            width: 70%;
+        }
     }
     &__pre {
         font-size: 16px;
@@ -75,6 +91,21 @@
             border: 2px solid $accent;
             border-radius: 50%;
             z-index: -1;
+            @media screen and (max-width: 780px) {
+                font-size: 150px;
+                width: 150px;
+                height: 150px;
+                top: -67px;
+                right: -145px;
+            }
+            @media screen and (max-width: 420px) {
+                font-size: 100px;
+                width: 100px;
+                height: 100px;
+                top: -17px;
+                right: -96px;
+                padding: 16px 21px 0;
+            }
             &:before {
                 content: "";
                 position: absolute;
@@ -105,6 +136,16 @@
             font-size: 50px;
             background: #fff;
             padding: 5px;
+            @media screen and (max-width: 780px) {
+                bottom: 24px;
+                left: 17px;
+                font-size: 31px;
+            }
+            @media screen and (max-width: 420px) {
+                bottom: 21px;
+                left: 17px;
+                font-size: 17px;
+            }
         }
     }
     &__subtitle {
@@ -123,7 +164,6 @@
         max-width: 415px;
 
         @media screen and (max-width: 580px) {
-            text-align: center;
             font-size: 10px;
             line-height: 16px;
             margin-bottom: 17px;

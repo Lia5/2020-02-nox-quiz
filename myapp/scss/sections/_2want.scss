@@ -2,6 +2,9 @@
     padding-bottom: 50px;
     &__body {
         display: flex;
+        @media screen and (max-width: 580px) {
+            flex-wrap: wrap;
+        }
     }
     &__item {
         position: relative;
@@ -9,8 +12,20 @@
         width: 33%;
         width: calc(100% / 3);
         z-index: 1;
+        @media screen and (max-width: 880px) {
+            padding: 20px 20px 20px;
+        }
+        @media screen and (max-width: 580px) {
+            width: 100%;
+            padding: 80px 72px 51px;
+            text-align: center;
+        }
         &--title {
             padding-left: 0;
+            @media screen and (max-width: 580px) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
         }
         &--topgreen {
             &:before {
@@ -22,6 +37,9 @@
                 height: 125%;
                 background: $accent;
                 z-index: -1;
+                @media screen and (max-width: 580px) {
+                    height: 100%;
+                }
             }
         }
         &--green {
@@ -39,6 +57,9 @@
         &--black {
             color: #fff;
             padding-left: 0;
+            @media screen and (max-width: 580px) {
+                padding-left: 72px;
+            }
 
             &:before {
                 content: "";
@@ -54,6 +75,9 @@
     }
     &__icon {
         width: 80px;
+        @media screen and (max-width: 580px) {
+            margin: 0 auto;
+        }
         img {
             max-width: 100%;
         }

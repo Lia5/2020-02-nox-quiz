@@ -19,32 +19,75 @@
         padding: 78px 100px 69px;
         background-position: top -24px right -136px;
         background-repeat: no-repeat;
+        @media screen and (max-width: 1110px) {
+            background-position: top -24px left 512px;
+        }
+        @media screen and (max-width: 780px) {
+            padding: 78px 20px 69px;
+        }
+        @media screen and (max-width: 540px) {
+            padding-top: 40px;
+            padding-bottom: 30px;
+        }
     }
     &--optica {
         background-image: url("../img/optica.png");
         background-position: top 197px right -101px;
+        @media screen and (max-width: 1110px) {
+            background-position: top 197px left 512px;
+        }
+        @media screen and (max-width: 780px) {
+            background-position: top 197px left 413px;
+        }
     }
     &--md {
         background-image: url("../img/md.png");
         background-position: top -24px right -136px;
+        @media screen and (max-width: 1110px) {
+            background-position: top -24px left 452px;
+        }
+        @media screen and (max-width: 780px) {
+            background-position: top -24px left 302px
+        }
     }
     &--solarled {
         background-image: url("../img/solarled.png");
         background-position: top 277px right -4px;
+        @media screen and (max-width: 1110px) {
+            background-position: top 277px left 512px;
+        }
+        @media screen and (max-width: 780px) {
+            background-position: top 277px left 422px;
+        }
         .results__title {
             max-width: 701px;
         }
     }
     &--fainoclean {
         background-image: url("../img/fainoclean.png");
+        @media screen and (max-width: 1110px) {
+            background-position: top 46px left 552px;
+        }
+        @media screen and (max-width: 780px) {
+            background-position: top 46px left 402px;
+        }
         .results__figures {
             max-width: 472px;
         }
     }
     &--newhouse {
         background-image: url("../img/newhouse.png");
+        @media screen and (max-width: 1110px) {
+            background-position: top 166px left 582px;
+        }
+        @media screen and (max-width: 780px) {
+            background-position: top 166px left 465px;
+        }
         .results__title  {
             margin-bottom: 85px;
+            @media screen and (max-width: 540px) {
+                margin-bottom: 10px;
+            }
         }
         .results__figures {
             max-width: 466px;
@@ -52,6 +95,10 @@
     }
     &__header {
         display: flex;
+        @media screen and (max-width: 540px) {
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
     }
     &__title {
         font-size: 30px;
@@ -59,6 +106,11 @@
         font-weight: 700;
         max-width: 639px;
         margin-bottom: 50px;
+        @media screen and (max-width: 540px) {
+            font-size: 25px;
+            line-height: 1.2;
+            margin-bottom: 10px
+        }
     }
     &__logo {
         margin-top: 10px;
@@ -70,10 +122,17 @@
         flex-wrap: wrap;
         max-width: 444px;
         margin-bottom: 57px;
+        @media screen and (max-width: 540px) {
+            margin-bottom: 30px;
+        }
     }
     &__figure {
         padding-right: 30px;
         margin-bottom: 35px;
+        @media screen and (max-width: 540px) {
+            padding-right: 10px;
+            margin-bottom: 20px;
+        }
     }
     &__num {
         font-size: 42px;
@@ -81,6 +140,9 @@
         font-weight: 800;
         color: $accent;
         margin-bottom: 6px;
+        @media screen and (max-width: 540px) {
+            font-size: 25px;
+        }
     }
     &__details {
         visibility: hidden;
@@ -91,6 +153,9 @@
         &-wrap {
             display: flex;
             padding: 43px 0 0;
+            @media screen and (max-width: 580px) {
+                flex-wrap: wrap;
+            }
         }
         &.active {
             visibility: visible;
@@ -106,12 +171,22 @@
     &__btns {
         display: flex;
         align-items: center;
+        @media screen and (max-width: 540px) {
+            flex-wrap: wrap;
+        }
         .btn {
+            @media screen and (max-width: 540px) {
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
         .btn+.btn {
             margin-left: 25px;
             padding: 16px 10px;
             min-width: auto;
+            @media screen and (max-width: 540px) {
+                margin-left: auto;
+            }
         }
         .btn.btn--hidden {
             display: none;
@@ -130,21 +205,32 @@
         font-size: 16px;
         line-height: 24px;
         margin-bottom: 3px;
+        @media screen and (max-width: 540px) {
+            font-size: 11px;
+            line-height: 15px;
+        }
     }
     &__done {
         padding-left: 53px;
+        @media screen and (max-width: 580px) {
+            padding-left: 0;
+        }
     }
     &__list {
         list-style: none;
         margin: 0;
         padding: 0;
+        font-size: 16px;
+        @media screen and (max-width: 580px) {
+            padding-bottom: 40px;
+        }
         li {
             position: relative;
             padding-left: 20px;
             &:before {
                 content: "";
                 position: absolute;
-                top: 0;
+                top: 5px;
                 left: 0;
                 width: 10px;
                 height: 10px;
@@ -158,6 +244,10 @@
 .column {
     width: 50%;
     padding-right: 20px;
+    @media screen and (max-width: 580px) {
+        width: 100%;
+        padding-right: 0;
+    }
 }
 .arrow-btn {
     width: 26px;

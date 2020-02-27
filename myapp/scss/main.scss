@@ -201,7 +201,7 @@ button.btn {
 			font-size: 15px;
 		}
 		&:hover {
-			color: $accent;
+			color: #202020;
 		}
 	}
 }
@@ -212,6 +212,14 @@ button.btn {
     height: 350px;
 	border-radius: 50%;
 	background: $accent;
+	@media screen and (max-width: 1075px) {
+		width: 250px;
+    	height: 250px;
+	}
+	@media screen and (max-width: 580px) {
+		width: 150px;
+    	height: 150px;
+	}
 	&:before {
 		content: "";
 		position: absolute;
@@ -229,6 +237,11 @@ button.btn {
 		transform: scale(1.8);
 		border-radius: 50%;
 		border: 1px solid $accent;
+	}
+}
+.desctop-br {
+	@media screen and (max-width: 580px) {
+		display: none;
 	}
 }
 

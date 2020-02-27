@@ -113,21 +113,19 @@ $(function() {
                 }
             } else {
                 if ($(this).parent().parent().prev().find('.input--text').val() != ''){
-                    console.log($(this).parent().parent().prev().find('.input--text').val());
                     $(this).parent().parent().parent('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
                 } else {
                     $(this).parent().find('.kviz__error').text('Введите ответ!');
                 }
             }
 
-            
+            if($('.step-slide--finish').hasClass('active')){
+                $('.kviz-sidebar').addClass('disabled');
+                $('.kviz-sidebar-finish').removeClass('disabled');
+            }
         });
         // for radiobuttons
-        
-            $('input[type="radio"]+.pick-item__label').click(function(){
-                delayRadio($(this));       
-                console.log($(this).prev().hasClass('step1-2'));
-                
+            $('input[type="radio"]+.pick-item__label').on('click', function(){
                 if ($(this).prev().hasClass('step1-2')) {
                     $('#second-question').html('Какой конкретно товар вы хотите продать?');
                     $('#step2-1').attr('placeholder', 'Ваш товар');
@@ -135,21 +133,35 @@ $(function() {
                     $('#second-question').html('Какой информационный продукт  вы хотите реализовать?');
                     $('#step2-1').attr('placeholder', 'Ваш продукт');
                 }
+                delayRadio($(this));
+                console.log($('.step-slide--finish').hasClass('step-slide--active'));
+                if($('.step-slide--finish').hasClass('step-slide--active')){
+                    console.log('123');
+                    $('.kviz-sidebar').addClass('disabled');
+                    $('.kviz-sidebar-finish').removeClass('disabled');
+                }
             });
             function delayRadio(item) {
                 setTimeout( function () {
                     item.parent().parent().parent('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
-                    // $('.kviz-progress').find('.kviz-progress__item.active').removeClass('active').next().addClass('active'); 
-                    
-                }, 500 );   
+                }, 500 );
             };
 
-        $(".qa-prev").click(function(e) {
-            e.preventDefault();
-            $(this).parent().parent('.step-slide').removeClass('step-slide--active').prev().addClass('step-slide--active');
-            $('.kviz-progress').find('.kviz-progress__item.active').removeClass('active').prev().addClass('active'); 
+        $(".qa-last").click(function() {
+            $('.kviz-sidebar').addClass('disabled');
+            $('.kviz-sidebar-finish').removeClass('disabled');
         });
     }
+    $('.step-slide3 .pick-item')
+        .mouseenter(function() {
+            $(this).addClass('active').prevAll().addClass('active');
+        })
+        .mouseleave(function(){
+            $(this).removeClass('active').prevAll().removeClass('active');
+        })
+        .click(function(){
+            $(this).addClass('active').prevAll().addClass('active');
+        });
 
     //popup
     if(jQuery('.modal__wrap').length) {

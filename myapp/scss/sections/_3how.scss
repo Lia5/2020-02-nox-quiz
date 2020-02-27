@@ -1,13 +1,29 @@
 .how {
     padding-top: 164px;
     padding-bottom: 66px;
+    @media screen and (max-width: 880px) {
+        padding-top: 64px;
+    }
+    @media screen and (max-width: 580px) {
+        padding-top: 0;
+    }
     .wrap {
         display: flex;
+        overflow: hidden;
+        @media screen and (max-width: 880px) {
+            flex-wrap: wrap;
+        }
     }
     &__part {
         position: relative;
         width: 50%;
         padding-left: 66px;
+        @media screen and (max-width: 880px) {
+            width: 100%;
+        }
+        @media screen and (max-width: 580px) {
+            padding-left: 0;
+        }
         &:before {
             content: "";
             position: absolute;
@@ -16,12 +32,34 @@
             width: 622px;
             height: 730px;
             background: url('../img/how-bg.png') no-repeat;
+            @media screen and (max-width: 880px) {
+                left: auto;
+                right: -66px;
+                bottom: -855px;
+                width: 292px;
+                height: 639px;
+            }
+            @media screen and (max-width: 580px) {
+                bottom: -967px;
+                height: 339px;
+                background-size: contain;
+            }
+            @media screen and (max-width: 350px) {
+                right: 4px;
+                bottom: -965px;
+                width: 202px;
+                height: 232px;
+            }
         }
         .circle {
             position: absolute;
             bottom: 68px;
             right: 40px;
             z-index: -1;
+            @media screen and (max-width: 880px) {
+                bottom: -173px;
+                right: -29px;
+            }
         }
     }
     &__text {
@@ -31,6 +69,17 @@
     &__items {
         width: 50%;
         padding: 43px 20px 100px 22px;
+
+        @media screen and (max-width: 880px) {
+            width: 64%;
+        }
+        @media screen and (max-width: 580px) {
+            width: 100%;
+            padding: 43px 0 290px;
+        }
+        @media screen and (max-width: 340px) {
+            padding: 43px 0 230px;
+        }
     }
     &__item {
         position: relative;
@@ -39,6 +88,13 @@
         padding: 40px 20px 40px 60px;
         &:nth-of-type(2n) {
             margin-left: 131px;
+            @media screen and (max-width: 880px) {
+                margin-left: 31px;
+            }
+            @media screen and (max-width: 580px) {
+                margin-left: 0;
+                padding-right: 0;
+            }
         }
     }
     &__num {

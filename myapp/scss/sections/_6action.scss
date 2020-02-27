@@ -3,30 +3,55 @@
     position: relative;
     padding: 112px 0 0;
     overflow: hidden;
+    @media screen and (max-width: 580px) {
+        padding-top: 40px;
+    }
     &__body {
         display: flex;
-        padding: 0 0 0 70px
-
+        padding: 0 0 0 70px;
+        @media screen and (max-width: 980px) {
+            padding-left: 0;
+        }
+        @media screen and (max-width: 580px) {
+            flex-wrap: wrap;
+        }
     }
     &__title {
         font-size: 45px;
         line-height: 55px;
         font-weight: 800;
         margin-bottom: 82px;
+        @media screen and (max-width: 880px) {
+            font-size: 35px;
+            line-height: 1.2;
+            margin-bottom: 22px;
+        }
     }
     &__subtitle {
         font-size: 30px;
         line-height: 40px;
         margin-bottom: 41px;
+        @media screen and (max-width: 880px) {
+            font-size: 19px;
+            line-height: 1.2;
+        }
     }
     &__column {
         width: 50%;
+        @media screen and (max-width: 580px) {
+            width: 100%;
+            order: 1;
+            padding: 40px 0;
+        }
     }
 }
 .parallax {
     position: absolute;
     bottom: 0;
     display: flex;
+    @media screen and (max-width: 580px) {
+        display: none;
+    }
     img {
         margin-top: auto;
     }
@@ -43,12 +68,26 @@
     padding-top: 25px;
     padding-right: 164px;
     padding-bottom: 194px;
+    @media screen and (max-width: 980px) {
+        padding-bottom: 245px;
+    }
+    @media screen and (max-width: 880px) {
+        padding-top: 50px;
+        padding-right: 50px;
+    }
+    @media screen and (max-width: 580px) {
+        width: 100%;
+        padding: 0 20px 0 0;
+    }
     &__old {
         position: relative;
         font-size: 70px;
         line-height: 72px;
         font-weight: 800;
         color: #fff;
+        @media screen and (max-width: 880px) {
+            font-size: 43px;
+        }
         &:before {
             content: "";
             position: absolute;
@@ -58,11 +97,19 @@
             height: 7px;
             background: #fff;
             transform: rotate(-19deg);
+            @media screen and (max-width: 880px) {
+                top: 15px;
+                height: 5px;
+            }
         }
     }
     &__new {
         font-size: 135px;
         line-height: 141px;
         font-weight: 800;
+        @media screen and (max-width: 880px) {
+            font-size: 75px;
+            line-height: 1.2;
+        }
     }
 }

@@ -2,6 +2,12 @@
     color: #fff;
     background: #0a0a0a;
     padding: 165px 0 176px;
+    @media screen and (max-width: 880px) {
+        padding-bottom: 76px;
+    }
+    @media screen and (max-width: 580px) {
+        padding-bottom: 0;
+    }
     &__title {
         text-align: center;
         margin-bottom: 29px;
@@ -13,8 +19,14 @@
     }
     &-slider {
         display: flex;
+        @media screen and (max-width: 880px) {
+            flex-wrap: wrap;
+        }
         &__items {
             width: 50%;
+            @media screen and (max-width: 880px) {
+                width: 100%;
+            }
         }
         &__item {
             display: none;
@@ -29,6 +41,11 @@
             font-size: 330px;
             line-height: 340px;
             min-width: 241px;
+            @media screen and (max-width: 580px) {
+                font-size: 141px;
+                line-height: 180px;
+                min-width: 111px;
+            }
         }
         &__descr {
             padding-bottom: 16px;
@@ -39,6 +56,10 @@
             line-height: 60px;
             font-weight: 700;
             position: relative;
+            @media screen and (max-width: 580px) {
+                font-size: 30px;
+                line-height: 50px;
+            }
             &:before {
                 content: "";
                 position: absolute;
@@ -54,12 +75,21 @@
             line-height: 36px;
             font-weight: 700;
             padding-top: 38px;
+            @media screen and (max-width: 580px) {
+                font-size: 20px;
+                line-height: 21px;
+                font-weight: 700;
+                padding-top: 14px;
+            }
         }
         &__nums {
             display: flex;
             flex-wrap: wrap;
             width: 50%;
             padding: 20px 0 20px;
+            @media screen and (max-width: 880px) {
+                width: 100%;
+            }
         }
         &__num {
             position: relative;
@@ -68,6 +98,12 @@
             font-size: 30px;
             line-height: 30px;
             font-weight: 700;
+            @media screen and (max-width: 880px) {
+                margin-bottom: 40px;
+            }
+            @media screen and (max-width: 880px) {
+                margin-bottom: 50px;
+            }
             span {
                 position: relative;
                 display: flex;
@@ -79,6 +115,11 @@
                 border: 3px solid $accent;
                 padding: 8px 0 0 0;
                 margin: auto 0;
+                @media screen and (max-width: 580px) {
+                    width: 60px;
+                    height: 60px;
+                }
+                
                 &:after {
                     content: "";
                     position: absolute;
@@ -89,7 +130,12 @@
                     border-radius: 50%;
                     border: 5px solid #0a0a0a;
                     pointer-events: none;
+                    @media screen and (max-width: 580px) {
+                        width: 45px;
+                        height: 45px;
+                    }
                 }
+
 
             }
             &:before {
@@ -100,6 +146,22 @@
                 width: 93px;
                 height: 25px;
                 background: url('../img/icons/arrow-num.png');
+                @media screen and (max-width: 880px) {
+                    top: -10px;
+                    right: 1vw;
+                }
+                @media screen and (max-width: 680px) {
+                    right: -1vw;
+                }
+
+                @media screen and (max-width: 580px) {
+                    background-size: 100% 100%;
+                    width: 13vw;
+                    height: 14px;
+                    background-repeat: no-repeat;
+                    right: 0;
+                    top: -15px
+                }
             }
             &.active {
                 span {
@@ -110,19 +172,38 @@
                 &:before {
                     top: 116px;
                     transform: scale(1, -1);
+                    @media screen and (max-width: 880px) {
+                        top: 66px;
+                    }
                 }
             }
             &:nth-of-type(4) {
                 &:before {
                     top: 135px;
                     transform: rotate(59deg);
+                    @media screen and (max-width: 880px) {
+                        top: 52px;
+                        right: 2vw;
+                    }
+                    @media screen and (max-width: 680px) {
+                        top: 52px;
+                        right: -1vw;
+                    }
+                    @media screen and (max-width: 580px) {
+                        top: 80px;
+                        transform: rotate(72deg);
+                        right: -1vw;
+                    }
                 }
             }
             &:nth-of-type(n+5) {
                 &:before {
                     right: auto;
                     left: -50px;
-                    transform: scale(-1, 1)
+                    transform: scale(-1, 1);
+                    @media screen and (max-width: 580px) {
+                        left: -6vw;
+                    }
                 }
                 span {
                     margin: auto;
@@ -132,7 +213,10 @@
                 order: 4;
                 &:before {
                     top: 116px;
-                    transform: scale(-1, -1)
+                    transform: scale(-1, -1);
+                    @media screen and (max-width: 880px) {
+                        top: 66px;
+                    }
                 }
             }
             &:nth-of-type(6) {
@@ -142,7 +226,10 @@
                 order: 2;
                 &:before {
                     top: 116px;
-                    transform: scale(-1, -1)
+                    transform: scale(-1, -1);
+                    @media screen and (max-width: 880px) {
+                        top: 66px;
+                    }
                 }
             }
             &:nth-of-type(8) {
