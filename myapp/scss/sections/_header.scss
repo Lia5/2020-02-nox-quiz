@@ -12,11 +12,17 @@
         justify-content: space-between;
         align-items: center;
     }
+    &__text {
+        padding-left: 20px;
+        font-size: 14px;
+        font-weight: 600;
+    }
     &__social {
         display: flex;
         align-items: center;
         font-size: 16px;
         line-height: 24px;
+        margin-left: auto;
         a {
             padding: 5px 0;
             font-weight: 700;
