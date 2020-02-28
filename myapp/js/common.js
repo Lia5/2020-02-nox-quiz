@@ -128,15 +128,13 @@ $(function() {
             $('input[type="radio"]+.pick-item__label').on('click', function(){
                 if ($(this).prev().hasClass('step1-2')) {
                     $('#second-question').html('Какой конкретно товар вы хотите продать?');
-                    $('#step2-1').attr('placeholder', 'Ваш товар');
+                    $('#step2').attr('placeholder', 'Ваш товар');
                 } else if ($(this).prev().hasClass('step1-3')) {
                     $('#second-question').html('Какой информационный продукт  вы хотите реализовать?');
-                    $('#step2-1').attr('placeholder', 'Ваш продукт');
+                    $('#step2').attr('placeholder', 'Ваш продукт');
                 }
                 delayRadio($(this));
-                console.log($('.step-slide--finish').hasClass('step-slide--active'));
                 if($('.step-slide--finish').hasClass('step-slide--active')){
-                    console.log('123');
                     $('.kviz-sidebar').addClass('disabled');
                     $('.kviz-sidebar-finish').removeClass('disabled');
                 }
