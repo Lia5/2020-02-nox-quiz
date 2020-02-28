@@ -286,10 +286,10 @@ $(function() {
                         // }
                     }
                 });
-                fbq('track', 'Lead');
                 $('.btn-finish a').attr('href', "#").removeClass('modal-open').removeClass('kviz__btn').css('pointer-events', 'none');
                 $('.btn-finish').css('opacity', '0.5').css('pointer-events', 'none');
                 }
+                // fbq('track', 'Lead');
 
                 } else {}
                 });
