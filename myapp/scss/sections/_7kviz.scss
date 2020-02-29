@@ -81,6 +81,7 @@
             }
         }
         &__foto {
+            margin-bottom: 20px;
             img {
                 @media screen and (max-width: 540px) {
                     margin: auto;
@@ -100,6 +101,7 @@
         &__text {
             font-size: 12px;
             line-height: 18px;
+            margin-bottom: 45px;
             @media screen and (max-width: 980px) {
                 margin-bottom: 10px;
             }
@@ -242,6 +244,7 @@
                 }
                 &__line {
                     width: 100%;
+                    pointer-events: none;
                     &:after  {
                         content: "";
                         position: absolute;
@@ -285,8 +288,22 @@
                 background-color: $accent;
             }
             .pick-item {
-                &:hover, &.active {
+                cursor: default;
+                &.active {
                     .pick-item__line {
+                        &:before {
+                            background-color: $accent;
+                        }
+                        &:after {
+                            border-color: $accent;
+                        }
+                    }
+                }
+            }
+            .pick-item__label {
+                cursor: pointer;
+                &:hover {
+                    &+.pick-item__line {
                         &:before {
                             background-color: $accent;
                         }

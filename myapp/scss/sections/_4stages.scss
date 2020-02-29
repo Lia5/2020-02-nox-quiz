@@ -23,9 +23,24 @@
             flex-wrap: wrap;
         }
         &__items {
+            position: relative;
             width: 50%;
             @media screen and (max-width: 880px) {
                 width: 100%;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                top: -62px;
+                left: -60px;
+                width: 485px;
+                height: 400px;
+                background: url('../img/calendar.png') no-repeat;
+                @media screen and (max-width: 580px) {
+                    background-size: contain;
+                    width: 285px;
+                    height: 300px;
+                }
             }
         }
         &__item {

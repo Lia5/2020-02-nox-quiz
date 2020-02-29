@@ -150,15 +150,15 @@ $(function() {
             $('.kviz-sidebar-finish').removeClass('disabled');
         });
     }
-    $('.step-slide3 .pick-item')
+    $('.step-slide3 .pick-item__label')
         .mouseenter(function() {
-            $(this).addClass('active').prevAll().addClass('active');
+            $(this).parent().addClass('active').prevAll().addClass('active');
         })
         .mouseleave(function(){
-            $(this).removeClass('active').prevAll().removeClass('active');
+            $(this).parent().removeClass('active').prevAll().removeClass('active');
         })
         .click(function(){
-            $(this).addClass('active').prevAll().addClass('active');
+            $(this).parent().addClass('active').prevAll().addClass('active');
         });
 
     //popup

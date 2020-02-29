@@ -9,9 +9,9 @@
     }
     .wrap {
         display: flex;
-        overflow: hidden;
         @media screen and (max-width: 880px) {
             flex-wrap: wrap;
+            overflow: hidden;
         }
     }
     &__part {

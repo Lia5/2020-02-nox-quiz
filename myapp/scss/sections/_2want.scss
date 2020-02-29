@@ -16,9 +16,14 @@
             padding: 20px 20px 20px;
         }
         @media screen and (max-width: 580px) {
+            display: flex;
+            align-items: center;
             width: 100%;
-            padding: 80px 72px 51px;
+            padding: 40px;
             text-align: center;
+        }
+        @media screen and (max-width: 479px) {
+            padding: 20px;
         }
         &--title {
             padding-left: 0;
@@ -58,7 +63,7 @@
             color: #fff;
             padding-left: 0;
             @media screen and (max-width: 580px) {
-                padding-left: 72px;
+                padding-left: 20px;
             }
 
             &:before {
@@ -70,19 +75,30 @@
                 height: 100%;
                 background: #0a0a0a;
                 z-index: -1;
+                @media screen and (max-width: 580px) {
+                    width: 100%;
+                }
             }
         }
     }
     &__icon {
         width: 80px;
         @media screen and (max-width: 580px) {
-            margin: 0 auto;
+            margin-right: 40px;
         }
         img {
             max-width: 100%;
         }
     }
     &__text {
-        margin-top: 12px;
+        margin-top: 12px; 
+        @media screen and (max-width: 580px) {
+            margin-top: 0;
+            font-size: 20px;
+            text-align: left;
+        }
+        @media screen and (max-width: 479px) {
+            font-size: 16px;
+        }
     }
 }
